@@ -3,9 +3,9 @@ import { Navbar as NavbarContent } from "reactstrap";
 import { Container as Containers } from "../../styles/container";
 import { NavLink as Links } from "react-router-dom";
 
-export const HeaderTop = styled.header`
+export const HeaderTopContent = styled.header`
   width: 100%;
-  background: var(--dark-blue);
+  background: var(--primary);
 
   .row {
     width: 100%;
@@ -61,12 +61,7 @@ export const Container = styled(Containers)`
 
 export const Navbar = styled(NavbarContent)`
   padding: 20px 15px;
-  /*
-  position: fixed;
-  width: 100%;
-  z-index: 2000;
-  background: #ffffff; 
-  */
+
 
   .ml-auto {
     margin-left: auto !important;
@@ -107,7 +102,7 @@ export const Navbar = styled(NavbarContent)`
 
   .is-Active{
     color: var(--primary);
-    font-weight: 600;
+    font-weight: 400;
   }
   .navbar-toggler {
     border: 0;

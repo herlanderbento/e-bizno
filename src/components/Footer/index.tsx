@@ -151,7 +151,7 @@ export default function Footer() {
         <Row className="footer-end">
           <Col lg="6" sm="6" md="6" className="footer-end-items">
             <p>
-              &copy;2021 | e-Bizno Imobiliária. Todos os direitos reservados
+              &copy;2021 | e-Bizno Imobiliária. Todos os direitos reservados.
             </p>
           </Col>
           <Col lg="3" sm="3" md="3" className="footer-end-items">
