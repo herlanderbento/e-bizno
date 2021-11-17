@@ -1,14 +1,20 @@
 import { Col, Row } from "reactstrap";
 import { Container } from "../../../styles/container";
-import { Sections } from "./styles";
+import { Sections, Title } from "./styles";
 import { Cards } from "../../Cards";
 import { allData } from "./data";
-import { formatPrice } from '../../../utils/format'
+import { formatPrice } from "../../../utils/format";
 
 export function Section() {
   return (
     <Sections>
       <Container>
+        <Title>
+          <span>Casas e terrenos</span>
+          <h2>
+            Propriedade à venda no e-Bizno<span>.</span>
+          </h2>
+        </Title>
         <Row>
           {allData?.map(
             ({
@@ -41,7 +47,6 @@ export function Section() {
               </Col>
             )
           )}
-       
         </Row>
       </Container>
     </Sections>

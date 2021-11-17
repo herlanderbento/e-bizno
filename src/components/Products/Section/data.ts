@@ -97,5 +97,37 @@ export const allData = [
     area: `Área: 1400 Sqft`,
     amount: 32520000
   },
-  
+  {
+    id: uuid(),
+    img: img01,
+    title: `Condomínio Quinta dos Coqueiros T3`,
+    categories: `Apartamento`,
+    location: `Calombotão, Benguela`,
+    rooms: `Banheiro: 5`,
+    beds: `Quarto/s: 4`,
+    area: `Área: 1400 Sqft`,
+    amount: 32520000
+  },
+  {
+    id: uuid(),
+    img: img02,
+    title: `Condomínio Quinta dos Coqueiros T3`,
+    categories: `Apartamento`,
+    location: `Calombotão, Benguela`,
+    rooms: `Banheiro: 5`,
+    beds: `Quarto/s: 4`,
+    area: `Área: 1400 Sqft`,
+    amount: 32520000
+  },
+  {
+    id: uuid(),
+    img: img03,
+    title: `Condomínio Quinta dos Coqueiros T3`,
+    categories: `Apartamento`,
+    location: `Calombotão, Benguela`,
+    rooms: `Banheiro: 5`,
+    beds: `Quarto/s: 4`,
+    area: `Área: 1400 Sqft`,
+    amount: 32520000
+  },
 ]
