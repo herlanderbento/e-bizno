@@ -5,7 +5,8 @@ import { Sections } from "./styles";
 import { Title } from "../../Title";
 import { Cards } from "../../Cards";
 import { allData } from "./data";
-import { formatPrice } from '../../../utils/format'
+import { formatPrice } from "../../../utils/format";
+import { Link } from "react-router-dom";
 
 export function Section() {
   return (
@@ -47,7 +48,9 @@ export function Section() {
             )
           )}
           <Col lg="12" className="mt-5">
-            <Button>Ver mais productos</Button>
+            <Link to="/property">
+              <Button>Ver mais productos</Button>
+            </Link>
           </Col>
         </Row>
       </Container>

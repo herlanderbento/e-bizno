@@ -75,6 +75,6 @@ export const InputCard = styled.div`
   }
 
   button {
-    padding: 12px;
+    padding: 10px 15px;
   }
 `;

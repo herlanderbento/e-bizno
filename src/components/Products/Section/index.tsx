@@ -4,6 +4,7 @@ import { Sections, Title } from "./styles";
 import { Cards } from "../../Cards";
 import { allData } from "./data";
 import { formatPrice } from "../../../utils/format";
+import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
 
 export function Section() {
   return (
@@ -48,6 +49,35 @@ export function Section() {
             )
           )}
         </Row>
+        <Pagination  className="section-center">
+            <PaginationItem disabled>
+              <PaginationLink first href="#" />
+            </PaginationItem>
+            <PaginationItem disabled>
+              <PaginationLink href="#" previous />
+            </PaginationItem>
+            <PaginationItem className="active">
+              <PaginationLink href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">2</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">4</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">5</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" next />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" last />
+            </PaginationItem>
+          </Pagination>
       </Container>
     </Sections>
   );

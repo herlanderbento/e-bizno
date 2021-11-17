@@ -5,7 +5,7 @@ import { OtherInfo } from '../components/Home/OtherInfo'
 import { InfoAuction } from '../components/Home/InfoAuction'
 import { Auction } from '../components/Home/Auction'
 import { Looking } from '../components/Home/Looking'
-import { Subscribe } from '../components/Home/Subscribe'
+import { Subscribe } from '../components/Subscribe'
 
 export default function Home(){
   return (

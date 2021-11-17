@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Sections = styled.section`
-  padding: 40px 15px 90px;
+  padding: 40px 15px 50px;
   background: #ffffff;
 
   .row {
@@ -24,6 +24,29 @@ export const Sections = styled.section`
   button {
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+
+  .section-center{
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin-top: 40px;
+
+    .pagination{
+      margin: 0;
+
+      .page-link{
+        color: var(--dark);
+        padding: 10px 15px;
+      }
+
+      .active .page-link{
+        color: var(--light);
+        background: var(--primary) !important;
+        border: 0;
+      }
+    }
   }
 `;
 
