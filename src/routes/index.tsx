@@ -10,9 +10,9 @@ import { Products } from '../pages/products'
      <Switch>
        <Route path="/" exact component={Home}/>
        <Route path="/about" exact component={About}/>
-       <Route path="/leilão" exact component={Auction}/>
-       <Route path="/imóveis" exact component={Products}/>
-       <Route path="/contactos" exact component={Contact}/>
+       <Route path="/auction" exact component={Auction}/>
+       <Route path="/property" exact component={Products}/>
+       <Route path="/contacts" exact component={Contact}/>
      </Switch>
    )
  }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   width: 100%;
-  padding: 90px 15px 60px;
+  padding: 60px 15px 30px;
   border-radius: 5px;
   background-image: linear-gradient(
     to right,
@@ -19,7 +19,7 @@ export const Section = styled.section`
   }
 
   .form-text {
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 16px;
     color: #8c98a4;
   }

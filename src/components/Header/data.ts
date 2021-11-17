@@ -22,7 +22,7 @@ export const allData = [
   {
     id: uuid(),
     menu: 'Imóveis',
-    route: '/products',
+    route: '/property',
     active: 'is-Active'
   },
 ]

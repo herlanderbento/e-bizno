@@ -6,7 +6,7 @@ width: 100%;
 height: 100%;
 
 border: 0;
-box-shadow:  0px 15px 38px rgb(0 0 0 / 02%);
+box-shadow:  0px 15px 38px rgb(0 0 0 / 03%);
 
 .img{
   position: relative;
