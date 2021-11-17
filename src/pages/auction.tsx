@@ -1,4 +1,4 @@
-import AuctionPage from '../views/products'
+import AuctionPage from '../views/auction'
 
 export function Auction(){
   return(
