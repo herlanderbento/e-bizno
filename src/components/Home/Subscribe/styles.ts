@@ -12,7 +12,7 @@ export const Section = styled.section`
   }
 
   button{
-    background: var(--light);
+    background: #ffffff;
     color: var(--primary) !important;
     padding-top: 12px;
     padding-bottom: 12px;

@@ -25,10 +25,12 @@ export default createGlobalStyle`
     --light: #f1f6f7;
     --light-primary: #f8f9fa;
     --secondary: #6d7175;
+    --dark-secondary: #181d24;
 
-    --font-primary: 'Jost', sans-serif;
-    --font-secondary: 'Inter', sans-serif;
-    --font-tertiary: 'Roboto', sans-serif;
+    --font-primary: 'Jost', sans-serif !important;
+    --font-secondary: 'Inter', sans-serif !important;
+    --font-tertiary: 'Roboto', sans-serif !important;
+    --font-logo: "Pacifico", sans-serif !important;
   }
 
   html, body{
