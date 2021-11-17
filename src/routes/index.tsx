@@ -1,9 +1,9 @@
 import { Switch, Route } from 'react-router-dom'
-import { About } from '../pages/About'
-import { Auction } from '../pages/Auction'
-import { Contact } from '../pages/Contact'
-import { Home}  from '../pages/Home'
-import { Products } from '../pages/Products'
+import { About } from '../pages/about'
+import { Auction } from '../pages/auction'
+import { Contact } from '../pages/contact'
+import { Home }  from '../pages/home'
+import { Products } from '../pages/products'
 
  export default function routes(){
    return(

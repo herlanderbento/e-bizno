@@ -7,7 +7,7 @@ import { Auction } from '../components/Home/Auction'
 import { Looking } from '../components/Home/Looking'
 import { Subscribe } from '../components/Home/Subscribe'
 
-export function Home(){
+export default function Home(){
   return (
     <>
       <Hero/>
@@ -18,7 +18,6 @@ export function Home(){
       <Auction/>
       <Looking/>
       <Subscribe/>
-      <br/><br/><br/><br/>
     </>
   )
 }

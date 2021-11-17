@@ -2,7 +2,7 @@ import { Col, Row } from "reactstrap";
 import { Container } from "../../styles/container";
 import { FooterContent } from "./styles";
 
-export function Footer(){
+export default function Footer(){
   return(
     <FooterContent>
       <Container>
