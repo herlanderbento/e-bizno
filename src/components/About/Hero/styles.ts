@@ -1,72 +1,44 @@
 import styled from "styled-components";
 
-export const Banner = styled.div`
+export const Section = styled.section`
   width: 100%;
-  height: 600px;
+  padding: 90px 15px 60px;
+  border-radius: 5px;
   background-image: linear-gradient(
-    rgba(255, 255, 255, 0),
-    rgba(55, 125, 255, 0.075) 50%,
-    rgba(255, 255, 255, 0)
+    to right,
+    rgba(55, 125, 255, 0.03),
+    rgba(9, 165, 190, 0.05) 50%,
+    rgba(245, 202, 153, 0.05)
   );
-
   display: flex;
-  align-self: center;
+  justify-content: center;
+  align-items: center;
+
   .row {
-    z-index: 999;
-  }
-  .banner-text {
-    position: relative;
-    margin-top: 120px;
-
-    h1 {
-      font-size: 56px;
-      font-weight: 600;
-      margin-bottom: 60px;
-
-      span {
-        color: var(--primary);
-      }
-    }
-
-    p {
-      font-size: 21px;
-      color: var(--secondary);
-    }
-  }
-
-  .position-relative {
-    position: relative;
-  }
-
-  .position-absolute {
-    position: absolute;
-  }
-  .top-0 {
-    top: 0 !important;
-  }
-
-  .end {
-    right: 0;
+    justify-content: center;
   }
 
   .form-text {
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: 16px;
     color: #8c98a4;
-  }
-
-  .img-fluid {
-    margin-top: 30px;
-    width: 90%;
   }
 `;
 
 export const InputCard = styled.div`
   display: flex;
   background-color: #fff;
+  align-items: center;
   padding: 0.6125rem 0.6125rem;
   box-shadow: 0 0.375rem 1.5rem 0 rgb(140 152 164 / 13%);
   border-radius: 0.5rem;
+
+  .separator{
+    width: 2px;
+    height: 20px;
+    background: #8c98a4 !important;
+    opacity: .7;
+  }
 
   .input-card-form {
     position: relative;
@@ -93,7 +65,7 @@ export const InputCard = styled.div`
     font-size: 16px;
 
     &::placeholder {
-      font-size: 14px;
+      font-size: 16px;
       color: var(--secondary);
     }
     &:focus {

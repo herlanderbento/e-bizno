@@ -68,7 +68,7 @@ export const Navbar = styled(NavbarContent)`
   }
   .navbar-nav {
     align-items: center;
-    gap: 20px;
+    gap: 50px;
   }
 
   .navbar-brand {
