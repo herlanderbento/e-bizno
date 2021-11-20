@@ -31,12 +31,12 @@ export default function Footer() {
                 <ul className="nav-list">
                   <li>
                     <Link to="/">
-                      <a>+244 222 222 222</a>
+                      <span>+244 222 222 222</span>
                     </Link>
                   </li>
                   <li>
                     <Link to="/">
-                      <a>ebiznocompany@hotemail.co.ao</a>
+                      <span>ebiznocompany@hotemail.co.ao</span>
                     </Link>
                   </li>
                 </ul>
@@ -79,22 +79,22 @@ export default function Footer() {
                 <ul className="nav-list">
                   <li>
                     <Link to="/">
-                      <a>Contacto</a>
+                      <span>Contacto</span>
                     </Link>
                   </li>
                   <li>
                     <Link to="/">
-                      <a>Regulamento</a>
+                      <span>Regulamento</span>
                     </Link>
                   </li>
                   <li>
                     <Link to="/">
-                      <a>Dicas de segurança</a>
+                      <span>Dicas de segurança</span>
                     </Link>
                   </li>
                   <li>
                     <Link to="/">
-                      <a>Termos e condições</a>
+                      <span>Termos e condições</span>
                     </Link>
                   </li>
                 </ul>
@@ -110,22 +110,22 @@ export default function Footer() {
                 <ul className="nav-list links">
                   <li>
                     <Link to="/">
-                      <a>Sobre nós</a>
+                      <span>Sobre nós</span>
                     </Link>
                   </li>
                   <li>
                     <Link to="/">
-                      <a>Como funciona</a>
+                      <span>Como funciona</span>
                     </Link>
                   </li>
                   <li>
                     <Link to="/">
-                      <a>Como vender no e-bizno</a>
+                      <span>Como vender no e-bizno</span>
                     </Link>
                   </li>
                   <li>
                     <Link to="/">
-                      <a>Perguntas frequentes</a>
+                      <span>Perguntas frequentes</span>
                     </Link>
                   </li>
                 </ul>
@@ -158,12 +158,12 @@ export default function Footer() {
             <ul>
               <li>
                 <Link to="/">
-                  <a>Política de Privacidade</a>
+                  <span>Política de Privacidade</span>
                 </Link>
               </li>
               <li>
                 <Link to="/">
-                  <a>Mapa do site</a>
+                  <span>Mapa do site</span>
                 </Link>
               </li>
             </ul>

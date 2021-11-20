@@ -1,0 +1,1 @@
+import img from './src/assets/images/property/property-grid-1.png';
