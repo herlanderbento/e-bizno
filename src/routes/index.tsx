@@ -13,7 +13,7 @@ export default function routes() {
       <Route path="/about" exact component={About} />
       <Route path="/auction" exact component={Auction} />
       <Route path="/properties" exact component={Products} />
-      <Route path="/property/:id" exact component={Product} />
+      <Route path="/property/preview" exact component={Product} />
       <Route path="/contacts" exact component={Contact} />
     </Switch>
   );
