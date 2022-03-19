@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
-const api = axios.create({
-  url: ' http://localhost:3333'
+export const api = axios.create({
+  baseURL: process.env.REACT_APP_URL_API,
 });
 
-export default api;
+export const urlImage = process.env.REACT_APP_URL_AVATAR;

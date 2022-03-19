@@ -1,5 +1,5 @@
-import { Hero } from "../components/Auction/Hero";
-import { Section } from "../components/Auction/Section";
+import { Hero } from "components/Auction/Hero";
+import { Section } from "components/Auction/Section";
 
 export default function Auction() {
   return (

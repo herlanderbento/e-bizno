@@ -1,9 +1,9 @@
-import AboutPage from '../views/about'
+import AboutPage from "views/about";
 
-export function About(){
-  return(
-   <>
-     <AboutPage/>
-   </>
-  )
+export function About() {
+  return (
+    <>
+      <AboutPage />
+    </>
+  );
 }

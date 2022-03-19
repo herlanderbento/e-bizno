@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Col, Row } from "reactstrap";
 import { FiHexagon, FiHome, FiSearch } from "react-icons/fi";
 import { Container } from "../../../styles/container";

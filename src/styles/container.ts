@@ -6,7 +6,7 @@ export const Container = styled(Containers)`
     max-width: 960px;
   }
 
-  @media screen and (min-width: 1320px){
+  @media screen and (min-width: 1320px) {
     max-width: 1160px;
   }
 `;

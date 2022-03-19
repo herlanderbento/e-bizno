@@ -7,7 +7,6 @@ import img05 from '../../../assets/images/property/property-grid-4.png'
 import img06 from '../../../assets/images/property/property-grid-4.png'
 
 
-
 export const allData = [
   {
     id: uuid(),
@@ -17,7 +16,7 @@ export const allData = [
     location: `Calombotão, Benguela`,
     rooms: `Banheiro: 5`,
     beds: `Quarto/s: 4`,
-    area: `Área: 1400 Sqft`,
+    area: `Área: 1400`,
     amount: 32520000
   },
   {
@@ -28,7 +27,7 @@ export const allData = [
     location: `Calombotão, Benguela`,
     rooms: `Banheiro: 5`,
     beds: `Quarto/s: 4`,
-    area: `Área: 1400 Sqft`,
+    area: `Área: 1400`,
     amount: 32520000
   },
   {
@@ -39,7 +38,7 @@ export const allData = [
     location: `Calombotão, Benguela`,
     rooms: `Banheiro: 5`,
     beds: `Quarto/s: 4`,
-    area: `Área: 1400 Sqft`,
+    area: `Área: 1400`,
     amount: 32520000
   },
   {
@@ -50,7 +49,7 @@ export const allData = [
     location: `Calombotão, Benguela`,
     rooms: `Banheiro: 5`,
     beds: `Quarto/s: 4`,
-    area: `Área: 1400 Sqft`,
+    area: `Área: 1400`,
     amount: 32520000
   },
   {
@@ -61,7 +60,7 @@ export const allData = [
     location: `Calombotão, Benguela`,
     rooms: `Banheiro: 5`,
     beds: `Quarto/s: 4`,
-    area: `Área: 1400 Sqft`,
+    area: `Área: 1400`,
     amount: 32520000
   },
   {
@@ -72,7 +71,7 @@ export const allData = [
     location: `Calombotão, Benguela`,
     rooms: `Banheiro: 5`,
     beds: `Quarto/s: 4`,
-    area: `Área: 1400 Sqft`,
+    area: `Área: 1400`,
     amount: 32520000
   },
   {
@@ -83,7 +82,7 @@ export const allData = [
     location: `Calombotão, Benguela`,
     rooms: `Banheiro: 5`,
     beds: `Quarto/s: 4`,
-    area: `Área: 1400 Sqft`,
+    area: `Área: 1400`,
     amount: 32520000
   },
   {
@@ -94,7 +93,7 @@ export const allData = [
     location: `Calombotão, Benguela`,
     rooms: `Banheiro: 5`,
     beds: `Quarto/s: 4`,
-    area: `Área: 1400 Sqft`,
+    area: `Área: 1400`,
     amount: 32520000
   },
   {
@@ -105,7 +104,7 @@ export const allData = [
     location: `Calombotão, Benguela`,
     rooms: `Banheiro: 5`,
     beds: `Quarto/s: 4`,
-    area: `Área: 1400 Sqft`,
+    area: `Área: 1400`,
     amount: 32520000
   },
   {
@@ -116,7 +115,7 @@ export const allData = [
     location: `Calombotão, Benguela`,
     rooms: `Banheiro: 5`,
     beds: `Quarto/s: 4`,
-    area: `Área: 1400 Sqft`,
+    area: `Área: 1400`,
     amount: 32520000
   },
   {
@@ -127,7 +126,7 @@ export const allData = [
     location: `Calombotão, Benguela`,
     rooms: `Banheiro: 5`,
     beds: `Quarto/s: 4`,
-    area: `Área: 1400 Sqft`,
+    area: `Área: 1400`,
     amount: 32520000
   },
 ]

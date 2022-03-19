@@ -11,8 +11,8 @@ export const Section = styled.section`
     align-items: center;
   }
 
-  button{
-    background: #ffffff;
+  button {
+    background: #ffffff !important;
     color: var(--primary) !important;
     padding-top: 12px;
     padding-bottom: 12px;

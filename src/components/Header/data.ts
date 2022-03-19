@@ -1,28 +1,34 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from "uuid";
 
 export const allData = [
   {
     id: uuid(),
-    menu: 'Home',
-    route: '/',
-    active: 'is-Active'
+    menu: "Página inicial",
+    route: "/",
+    active: "is-Active",
   },
   {
     id: uuid(),
-    menu: 'Sobre nós',
-    route: '/about',
-    active: 'is-Active'
+    menu: "Sobre nós",
+    route: "/about",
+    active: "is-Active",
   },
   {
     id: uuid(),
-    menu: 'Leilão',
-    route: '/auction',
-    active: 'is-Active'
+    menu: "Leilão",
+    route: "/auction",
+    active: "is-Active",
   },
   {
     id: uuid(),
-    menu: 'Imóveis',
-    route: '/property',
-    active: 'is-Active'
+    menu: "Imóveis",
+    route: "/property",
+    active: "is-Active",
   },
-]
+  {
+    id: uuid(),
+    menu: "Contacto",
+    route: "/contact",
+    active: "is-Active",
+  },
+];

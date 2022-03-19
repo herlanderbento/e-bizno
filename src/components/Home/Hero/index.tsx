@@ -4,8 +4,6 @@ import { Banner, InputCard } from "./styles";
 import { BiSearch } from "react-icons/bi";
 import { Button } from "../../Button";
 
-import img from '../../../assets/images/img20.jpg'
-
 export function Hero() {
   return (
     <Banner>
@@ -34,11 +32,17 @@ export function Hero() {
               </InputCard>
             </form>
 
-            <p className="form-text small">Pesquise em mais de 125.000 listagens</p>
+            <p className="form-text small">
+              Pesquise em mais de 125.000 listagens
+            </p>
           </Col>
         </div>
         <Col lg="6" className="text-center position-absolute top-0 end">
-          <img className="img-fluid" src={img} alt="Banner"/>
+          <img
+            className="img-fluid"
+            src="/assets/images/img20.jpg"
+            alt="Banner"
+          />
         </Col>
       </Container>
     </Banner>

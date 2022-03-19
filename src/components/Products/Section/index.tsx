@@ -1,15 +1,15 @@
+import axios from "axios";
 import { Col, Row } from "reactstrap";
-import { Container } from "../../../styles/container";
+import { Container } from "styles/container";
 import { Sections, Title } from "./styles";
 import { Cards } from "../../Cards";
-// import { allData } from "./data";
-import { formatPrice } from "../../../utils/format";
+import { formatPrice } from "utils/format";
 import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
 import { useEffect, useState } from "react";
-import img01 from '../../../assets/images/property/property-grid-1.png'
+import img01 from "../../../assets/images/property/property-grid-1.png";
 
+// import { allData } from "./data";
 // import api from "../../../services/api";
-import axios from "axios";
 
 interface Request {
   uuid: string;
@@ -23,14 +23,13 @@ interface Request {
   area: string;
 }
 
-
 export function Section() {
   const [allData, setAllData] = useState([]);
 
   useEffect(() => {
     async function fetch() {
       try {
-        const { data } = await axios.get("http://localhost:3333/property");
+        const { data } = await axios.get("http://localhost:8888/property");
         setAllData(data);
       } catch (err) {
         console.error(err);
@@ -39,7 +38,7 @@ export function Section() {
     fetch();
   }, []);
 
-  console.log("data", allData);
+  console.log(allData);
 
   return (
     <Sections>
@@ -80,14 +79,10 @@ export function Section() {
                   classNameTitles="title"
                 />
               </Col>
-              
             )
           )}
         </Row>
         <Pagination className="section-center">
-          <PaginationItem disabled>
-            <PaginationLink first href="#" />
-          </PaginationItem>
           <PaginationItem disabled>
             <PaginationLink href="#" previous />
           </PaginationItem>
@@ -108,9 +103,6 @@ export function Section() {
           </PaginationItem>
           <PaginationItem>
             <PaginationLink href="#" next />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" last />
           </PaginationItem>
         </Pagination>
       </Container>

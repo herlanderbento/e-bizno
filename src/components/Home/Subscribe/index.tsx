@@ -1,4 +1,4 @@
-import { Container } from "../../../styles/container";
+import { Container } from "styles/container";
 import { Button } from "../../Button";
 import { Section } from "./styles";
 
