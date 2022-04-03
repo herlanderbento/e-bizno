@@ -3,8 +3,8 @@ import { About } from "pages/about";
 import { Auction } from "pages/auction";
 import { Contact } from "pages/contact";
 import { Home } from "pages/home";
-import { Products } from "pages/products";
-import { Product } from "pages/product";
+import { Property } from "pages/property";
+import { Properties } from "pages/properties";
 
 export default function routes() {
   return (
@@ -12,8 +12,8 @@ export default function routes() {
       <Route path="/" exact component={Home} />
       <Route path="/about" exact component={About} />
       <Route path="/auction" exact component={Auction} />
-      <Route path="/properties" exact component={Products} />
-      <Route path="/property/preview" exact component={Product} />
+      <Route path="/properties" exact component={Properties} />
+      <Route path="/property/:id" exact component={Property} />
       <Route path="/contacts" exact component={Contact} />
     </Switch>
   );
