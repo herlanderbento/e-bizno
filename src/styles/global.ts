@@ -26,6 +26,7 @@ export default createGlobalStyle`
     --light-primary: #f8f9fa;
     --secondary: #6d7175;
     --dark-secondary: #181d24;
+    --text: #62606c;
 
     --font-primary: 'Jost', sans-serif !important;
     --font-secondary: 'Inter', sans-serif !important;
