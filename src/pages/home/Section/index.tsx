@@ -33,6 +33,7 @@ export function Section() {
             }) => (
               <Col key={id} lg="4" md="4" sm="4" className="my-3">
                 <Cards
+                  to={`propriedades/${id}`}
                   sales="Novo"
                   feature="Disponível"
                   image={img}
@@ -48,7 +49,7 @@ export function Section() {
             )
           )}
           <Col lg="12" className="mt-5">
-            <Link to="/property">
+            <Link to="/imoveis">
               <Button>Ver mais productos</Button>
             </Link>
           </Col>

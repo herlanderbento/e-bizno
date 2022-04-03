@@ -10,25 +10,25 @@ export const allData = [
   {
     id: uuid(),
     menu: "Sobre nós",
-    route: "/about",
+    route: "/sobre-nos",
     active: "is-Active",
   },
   {
     id: uuid(),
     menu: "Leilão",
-    route: "/auction",
+    route: "/leilao",
     active: "is-Active",
   },
   {
     id: uuid(),
     menu: "Imóveis",
-    route: "/properties",
+    route: "/imoveis",
     active: "is-Active",
   },
   {
     id: uuid(),
-    menu: "Contacto",
-    route: "/contact",
+    menu: "Contactos",
+    route: "/contactos",
     active: "is-Active",
   },
 ];

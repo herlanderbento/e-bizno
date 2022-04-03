@@ -1,7 +1,9 @@
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { useHistory } from "react-router-dom";
 import { Card } from "./styles";
 
 interface CardProps {
+  to: string;
   sales?: string;
   feature?: string;
   image: string;
@@ -13,11 +15,12 @@ interface CardProps {
   rooms?: string;
   area?: string;
   classNameTitles?: string;
-  classNameNav?:string;
+  classNameNav?: string;
   classNamePrice?: string;
 }
 
 export function Cards({
+  to,
   sales,
   feature,
   image,
@@ -30,10 +33,12 @@ export function Cards({
   area,
   classNameTitles,
   classNameNav,
-  classNamePrice
+  classNamePrice,
 }: CardProps) {
+  const { push } = useHistory();
+
   return (
-    <Card>
+    <Card onClick={() => push(`${to}`)}>
       <div className="img">
         <figure>
           <img src={image} alt={title} className="img-fluid" />

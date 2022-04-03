@@ -1,4 +1,4 @@
-{ 
+{
   "property": [
     {
       "uuid": "d6f4c7d0-0469-402b-809b-45e78648eef8",
@@ -101,6 +101,52 @@
     },
     {
       "uuid": "71c2d0bb-e96d-4d3b-892b-a21cc87f9a40",
+      "image": "src/assets/images/property/property-grid-1.png",
+      "title": "Condomínio Quinta dos Coqueiros T3",
+      "categories": "Apartamento",
+      "location": "Calombotão, Benguela",
+      "rooms": "Banheiro: 5",
+      "beds": "Quarto/s: 4",
+      "area": "Área: 1400",
+      "amount": 32520000
+    }
+  ],
+  "properties": [
+    {
+      "uuid": "d6f4c7d0-0469-402b-809b-45e78648eef8",
+      "image": "property-grid-1.png",
+      "title": "Condomínio Quinta dos Coqueiros T3",
+      "categories": "Apartamento",
+      "location": "Calombotão, Benguela",
+      "rooms": "Banheiro: 5",
+      "beds": "Quarto/s: 4",
+      "area": "Área: 1400",
+      "amount": 32520000
+    },
+    {
+      "uuid": "1ef86f47-496e-4ac4-9f5b-edf640bfeab4",
+      "image": "src/assets/images/property/property-grid-1.png",
+      "title": "Condomínio Quinta dos Coqueiros T3",
+      "categories": "Apartamento",
+      "location": "Calombotão, Benguela",
+      "rooms": "Banheiro: 5",
+      "beds": "Quarto/s: 4",
+      "area": "Área: 1400",
+      "amount": 32520000
+    },
+    {
+      "uuid": "aa7b2bf5-5734-4d9e-b8ff-e863c99e61b3",
+      "image": "src/assets/images/property/property-grid-1.png",
+      "title": "Condomínio Quinta dos Coqueiros T3",
+      "categories": "Apartamento",
+      "location": "Calombotão, Benguela",
+      "rooms": "Banheiro: 5",
+      "beds": "Quarto/s: 4",
+      "area": "Área: 1400",
+      "amount": 32520000
+    },
+    {
+      "uuid": "dfeb7ec3-4d5a-4597-be15-5517e311cf2d",
       "image": "src/assets/images/property/property-grid-1.png",
       "title": "Condomínio Quinta dos Coqueiros T3",
       "categories": "Apartamento",

@@ -8,6 +8,8 @@ export const Card = styled(Cards)`
   border: 0;
   box-shadow: 0px 15px 38px rgb(0 0 0 / 03%);
 
+  cursor: pointer;
+
   .img {
     position: relative;
 

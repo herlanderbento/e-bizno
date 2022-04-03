@@ -35,6 +35,7 @@ export function Auction() {
             }) => (
               <Col key={id} lg="3" md="3" sm="3" className="my-3">
                 <Cards
+                  to={`propriedades/${id}`}
                   sales="Novo"
                   feature="Disponível"
                   image={img}
