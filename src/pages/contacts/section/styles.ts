@@ -32,7 +32,7 @@ export const SectionContent = styled.section`
     }
 
     button {
-      padding: 16px 35px;
+      padding: 12px 35px;
       width: 100%;
     }
   }

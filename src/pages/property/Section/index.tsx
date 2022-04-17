@@ -12,7 +12,7 @@ export function Section() {
   return (
     <Content>
       <Container>
-        <div className="section-top">
+        {/* <div className="section-top">
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -23,7 +23,7 @@ export function Section() {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
         <Row>
           <Col lg="8" sm="6" md="8">
             <div className="product">

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Content = styled.section`
   padding: 60px 15px;
-  background: var(--light-primary);
 
   .section-top {
     padding-bottom: 20px;
@@ -33,7 +32,7 @@ export const Content = styled.section`
   }
 
   .product {
-    box-shadow: 0px 15px 38px rgb(0 0 0 / 03%);
+    box-shadow: 0px 15px 32px rgb(0 0 0 / 03%);
     background: #fff;
 
     .section-product-image {
@@ -165,7 +164,7 @@ export const Content = styled.section`
     .merchant-form {
       .form-group button {
         width: 100%;
-        padding: 15px;
+        padding: 12px 15px;
       }
 
       .d-flex {

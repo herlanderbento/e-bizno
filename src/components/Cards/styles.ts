@@ -106,6 +106,14 @@ export const Card = styled(Cards)`
       span {
         color: var(--secondary);
         font-size: 16px;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 14px;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        gap: 5px;
       }
     }
   }

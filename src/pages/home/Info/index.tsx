@@ -11,7 +11,7 @@ export function Info() {
       <Container>
         <InfoContainer>
           <Row>
-            <Col lg="4" md="4" sm="4">
+            <Col lg="4" md="6" sm="6">
               <div className="info-items card">
                 <div className="header-info">
                   <FiSearch size={42} color="#7c6ee4" />
@@ -26,7 +26,7 @@ export function Info() {
                 </div>
               </div>
             </Col>
-            <Col lg="4" md="4" sm="4">
+            <Col lg="4" md="6" sm="6">
               <div className="info-items card">
                 <div className="header-info">
                   <FiHome size={42} color="#7c6ee4" />
@@ -41,7 +41,7 @@ export function Info() {
                 </div>
               </div>
             </Col>
-            <Col lg="4" md="4" sm="4">
+            <Col lg="4" md="6" sm="6">
               <div className="info-items card">
                 <div className="header-info">
                   <FiHexagon size={42} color="#7c6ee4" />

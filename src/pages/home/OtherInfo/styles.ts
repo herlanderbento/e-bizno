@@ -3,10 +3,34 @@ import { Card as Cards } from "reactstrap";
 
 export const Section = styled.section`
   padding: 80px 15px 100px;
+  overflow-x: hidden;
   background: var(--light-primary);
   .row {
     margin-top: 40px;
     align-items: stretch;
+  }
+
+  .slick-slider {
+    margin-top: 40px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 999;
+  }
+
+  .slick-prev {
+    left: -18px;
+  }
+
+  .slick-next {
+    right: -8px;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 30px;
+    opacity: 1;
+    color: var(--primary);
   }
 `;
 export const Card = styled(Cards)`
@@ -23,6 +47,11 @@ export const Card = styled(Cards)`
       img {
         width: 286px;
         height: 352.97px !important;
+
+        @media screen and (max-width: 1200px) {
+          width: 100%;
+          height: 380px !important;
+        }
       }
       figcaption {
         position: absolute;
@@ -40,17 +69,14 @@ export const Card = styled(Cards)`
         background: rgba(0, 0, 0, 0.4);
         color: var(--light);
 
-        h4{
+        h4 {
           font-size: 20px;
         }
 
-        span{
+        span {
           font-size: 15px;
         }
-
       }
     }
   }
-
-  
 `;

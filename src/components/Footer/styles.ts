@@ -100,6 +100,10 @@ export const FooterContent = styled.footer`
         font-size: 14px;
         opacity: 0.8;
       }
+
+      @media screen and (max-width: 767px) {
+        text-align: center;
+      }
     }
 
     ul {
@@ -118,6 +122,10 @@ export const FooterContent = styled.footer`
           color: var(--primary);
           opacity: 1;
         }
+      }
+
+      @media screen and (max-width: 767px) {
+        justify-content: center;
       }
     }
   }

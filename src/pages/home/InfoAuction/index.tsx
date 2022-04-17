@@ -13,7 +13,7 @@ export function InfoAuction() {
   return (
     <Section>
       <Container className="container-md">
-        <Col lg="9" x="12">
+        <Col lg="9" md="12" x="12">
           <Col lg="9" className="mb-5">
             <Title
               className="mb-5"
@@ -23,7 +23,7 @@ export function InfoAuction() {
             />
           </Col>
           <Row>
-            <Col lg="4" md="4" sm="4">
+            <Col lg="4" md="4" sm="6" className="my-3">
               <Card>
                 <div className="header-info">
                   <RiFileEditLine size={32} color="#7c6ee4" />
@@ -42,7 +42,7 @@ export function InfoAuction() {
               </Card>
             </Col>
 
-            <Col lg="4" md="4" sm="4">
+            <Col lg="4" md="4" sm="6" className="my-3">
               <Card>
                 <div className="header-info">
                   <RiFilePaper2Line size={32} color="#7c6ee4" />
@@ -61,7 +61,7 @@ export function InfoAuction() {
               </Card>
             </Col>
 
-            <Col lg="4" md="4" sm="4">
+            <Col lg="4" md="4" sm="6" className="my-3">
               <Card>
                 <div className="header-info">
                   <RiUser4Line size={32} color="#7c6ee4" />

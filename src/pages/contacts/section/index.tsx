@@ -15,7 +15,7 @@ export function Section() {
           <Col lg="7" sm="7" md="7">
             <div className="contact-form">
               <div className="contact-form-title">
-                <h2>Get in Touch</h2>
+                <h2>Entre em contacto</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
                   eiusmod tempor incididunt ut labore et dolore
@@ -55,7 +55,7 @@ export function Section() {
           <Col lg="4" sm="4" md="4">
             <div className="contact-info">
               <div className="contact-info-title">
-                <h2>Contact Address:</h2>
+                <h2>Endereço de contacto:</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
                   eiusmod tempor incididunt ut labore et dolore magna aliqua

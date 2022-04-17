@@ -16,7 +16,7 @@ export default function Footer() {
     <FooterContent>
       <Container>
         <Row>
-          <Col lg="3" md="3" sm="3">
+          <Col lg="3" md="6" sm="6" className="my-2">
             <div className="footer-items">
               <div className="header">
                 <h4 className="logo">
@@ -70,7 +70,7 @@ export default function Footer() {
               </div>
             </div>
           </Col>
-          <Col lg="3" md="3" sm="3">
+          <Col lg="3" md="6" sm="6" className="my-2">
             <div className="footer-items">
               <div className="header">
                 <h4>Informação</h4>
@@ -101,7 +101,7 @@ export default function Footer() {
               </div>
             </div>
           </Col>
-          <Col lg="3" md="3" sm="3">
+          <Col lg="3" md="6" sm="6" className="my-2">
             <div className="footer-items">
               <div className="header">
                 <h4>Link rápido</h4>
@@ -132,7 +132,7 @@ export default function Footer() {
               </div>
             </div>
           </Col>
-          <Col lg="3" md="3" sm="3">
+          <Col lg="3" md="6" sm="6" className="my-2">
             <div className="footer-items">
               <div className="header">
                 <h4>Como criar uma conta</h4>
@@ -149,12 +149,12 @@ export default function Footer() {
         </Row>
 
         <Row className="footer-end">
-          <Col lg="6" sm="6" md="6" className="footer-end-items">
+          <Col lg="6" sm="12" md="6" className="footer-end-items">
             <p>
               &copy;2021 | e-Bizno Imobiliária. Todos os direitos reservados.
             </p>
           </Col>
-          <Col lg="3" sm="3" md="3" className="footer-end-items">
+          <Col lg="3" sm="12" md="6" className="footer-end-items">
             <ul>
               <li>
                 <Link to="/">

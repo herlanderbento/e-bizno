@@ -6,12 +6,16 @@ export const Section = styled.section`
   margin-top: 60px;
 
   .subscribe {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    button {
+      width: 100%;
+      padding: 15px 0;
+    }
+  }
+  .text-right {
+    text-align: right;
   }
 
-  button{
+  button {
     background: #ffffff;
     color: var(--primary) !important;
     padding-top: 12px;
@@ -21,5 +25,13 @@ export const Section = styled.section`
   p {
     color: var(--light);
     font-size: 28px;
+
+    @media screen and (max-width: 991px) {
+      font-size: 26px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 18px;
+    }
   }
 `;

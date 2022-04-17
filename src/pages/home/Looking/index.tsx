@@ -21,7 +21,7 @@ export function Looking() {
           />
         </Col>
         <Row>
-          <Col lg="3" md="3" sm="3">
+          <Col lg="3" md="4" sm="6" className="my-3">
             <Card>
               <div className="header-info">
                 <RiFileEditLine size={32} color="#7c6ee4" />
@@ -40,7 +40,7 @@ export function Looking() {
             </Card>
           </Col>
 
-          <Col lg="3" md="3" sm="3">
+          <Col lg="3" md="4" sm="6" className="my-3">
             <Card>
               <div className="header-info">
                 <RiFileEditLine size={32} color="#7c6ee4" />
@@ -59,7 +59,7 @@ export function Looking() {
             </Card>
           </Col>
 
-          <Col lg="3" md="3" sm="3">
+          <Col lg="3" md="4" sm="6" className="my-3">
             <Card>
               <div className="header-info">
                 <RiFilePaper2Line size={32} color="#7c6ee4" />
@@ -78,7 +78,7 @@ export function Looking() {
             </Card>
           </Col>
 
-          <Col lg="3" md="3" sm="3">
+          <Col lg="3" md="4" sm="6" className="my-3">
             <Card>
               <div className="header-info">
                 <RiUser4Line size={32} color="#7c6ee4" />

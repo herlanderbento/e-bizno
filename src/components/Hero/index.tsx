@@ -13,7 +13,7 @@ export function Hero({ title, page }: HeroProps) {
     <Section>
       <Container>
         <Row className="justify-content-between align-items-center">
-          <Col lg="4" sm="6" md="6">
+          <Col lg="4" sm="12" md="12">
             <div className="section-text">
               <h2>{title}</h2>
               <ul className="nav-list">
@@ -29,7 +29,7 @@ export function Hero({ title, page }: HeroProps) {
               </ul>
             </div>
           </Col>
-          <Col lg="6" sm="6" md="6">
+          <Col lg="6" sm="12" md="12">
             <div className="section-img">
               <img
                 src="/assets/images/page-banner.png"

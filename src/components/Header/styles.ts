@@ -1,67 +1,54 @@
 import styled from "styled-components";
 import { Navbar as NavbarContent } from "reactstrap";
-import { Container as Containers } from "../../styles/container";
 import { NavLink as Links } from "react-router-dom";
 
-export const HeaderTopContent = styled.header`
-  width: 100%;
-  background: var(--primary);
-
-  .row {
+export const HeaderContent = styled.header`
+  &.header {
     width: 100%;
   }
 
-  .nav-icons {
-    justify-content: flex-end;
-    gap: 30px;
+  .navbar-toggler {
+    margin-top: 10px;
+
+    font-size: 28px;
+    color: var(--primary);
   }
 
-  .nav-list {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin: 10px 0;
+  .navbar {
+    padding: 10px 0;
+    margin: 0;
+
+    @media screen and (max-width: 834px) {
+      padding: 10px 15px;
+    }
+  }
+
+  .container {
     padding: 0;
+  }
 
-    li a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--light);
-      font-weight: 500;
-      font-size: 12px;
-      transition: all 0.2s ease-in-out;
-      transform: translateY(0);
+  &.is-sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 2000;
+    box-shadow: 0 2px 24px 0 rgb(0 0 0 / 8%);
+    background-color: #ffffff;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    transition: 0.2s ease-in-out;
 
-      &:hover {
-        color: var(--primary);
-      }
+    .navbar {
+      padding: 5px 15px !important;
     }
   }
 `;
 
-export const Container = styled(Containers)`
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
-  position: relative;
+export const Navbar = styled(NavbarContent)`
+  padding: 10px 15px;
 
   @media screen and (max-width: 991px) {
-    display: block;
+    padding: 5px 15px;
   }
-
-  @media screen and (max-width: 992px) {
-    max-width: 960px;
-  }
-
-  .sticky-top {
-    background: red !important;
-  }
-`;
-
-export const Navbar = styled(NavbarContent)`
-  padding: 20px 15px;
-
 
   .ml-auto {
     margin-left: auto !important;
@@ -69,6 +56,12 @@ export const Navbar = styled(NavbarContent)`
   .navbar-nav {
     align-items: center;
     gap: 50px;
+
+    @media screen and (max-width: 991px) {
+      padding-top: 20px;
+      align-items: start;
+      gap: 20px;
+    }
   }
 
   .navbar-brand {
@@ -100,7 +93,7 @@ export const Navbar = styled(NavbarContent)`
     } */
   }
 
-  .is-Active{
+  .is-Active {
     color: var(--primary);
     font-weight: 400;
   }
@@ -120,7 +113,7 @@ export const Navbar = styled(NavbarContent)`
 `;
 
 export const NavLink = styled(Links)`
-  color: var(--dark) ;
+  color: var(--dark);
   font-size: 16px;
   transition: all 0.2s ease-in-out;
   position: relative;

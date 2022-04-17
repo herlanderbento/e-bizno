@@ -11,8 +11,24 @@ export const Section = styled.section`
     rgba(245, 202, 153, 0.05)
   );
 
+  @media screen and (max-width: 990px) {
+    padding-top: 40px;
+  }
+
   .section-text {
     position: relative;
+
+    @media (max-width: 990px) {
+      text-align: center;
+
+      .nav-list {
+        justify-content: center;
+      }
+
+      margin-bottom: 40px;
+
+     
+    }
 
     .nav-list {
       margin-top: 20px;
@@ -58,6 +74,11 @@ export const Section = styled.section`
 
   .section-img {
     text-align: center;
+
+    img {
+      height: 200px;
+      object-fit: cover;
+    }
   }
 `;
 export const SectionTitle = styled.section``;

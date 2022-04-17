@@ -31,7 +31,7 @@ export function Section() {
               area,
               amount,
             }) => (
-              <Col key={id} lg="4" md="4" sm="4" className="my-3">
+              <Col key={id} lg="4" md="4" sm="6" className="my-3">
                 <Cards
                   to={`propriedades/${id}`}
                   sales="Novo"
