@@ -57,7 +57,7 @@ export function Section() {
               area,
               amount,
             }: Request) => (
-              <Col key={uuid} lg="3" md="3" sm="3" className="my-3">
+              <Col key={uuid} lg="3" md="4" sm="6" className="my-3">
                 <Cards
                   to={`propriedades/${uuid}`}
                   sales="Novo"

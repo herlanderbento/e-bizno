@@ -1,3 +1,6 @@
+import Header from "components/Header";
+import Footer from "components/Footer";
+
 import { Auction } from "./Auction";
 import { Hero } from "./Hero";
 import { Info } from "./Info";
@@ -10,6 +13,7 @@ import { Subscribe } from "./Subscribe";
 export function Home() {
   return (
     <>
+      <Header />
       <Hero />
       <Info />
       <Section />
@@ -18,6 +22,7 @@ export function Home() {
       <Auction />
       <Looking />
       <Subscribe />
+      <Footer />
     </>
   );
 }

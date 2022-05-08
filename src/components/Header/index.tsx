@@ -34,7 +34,7 @@ export default function Header() {
         <Navbar expand="lg">
           <NavbarBrand href="/">
             <h1>
-              e-Bizno<span>.</span>
+              eBizno<span>.</span>
             </h1>
           </NavbarBrand>
           <NavbarToggler onClick={toggle}>
@@ -51,7 +51,7 @@ export default function Header() {
                 </NavItem>
               ))}
               <NavItem>
-                <Button href="/contact">Entrar</Button>
+                <Button href="/login">Entrar</Button>
               </NavItem>
             </Nav>
           </Collapse>

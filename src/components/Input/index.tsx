@@ -52,14 +52,14 @@ export function Input({
         (showPassword ? (
           <FaEye
             size={16}
-            color="#0060fe"
+            color="#677788"
             onClick={() => setShowPassword(!showPassword)}
             className="icon-click"
           />
         ) : (
           <FaEyeSlash
             size={16}
-            color="#0060fe"
+            color="#677788"
             onClick={() => setShowPassword(!showPassword)}
             className="icon-click"
           />
