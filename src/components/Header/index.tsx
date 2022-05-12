@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import { Collapse, Nav, NavbarBrand, NavbarToggler, NavItem } from "reactstrap";
-import { BiMenuAltRight } from "react-icons/bi";
+import { BiMenuAltRight, BiWallet } from "react-icons/bi";
 
 import { Navbar, Button, NavLink, HeaderContent } from "./styles";
 import { allData } from "./data";
 import { Container } from "styles/container";
+import { UserInfo } from "components/UserInfo";
+import { useAuth } from "hooks/useAuth";
 
 export default function Header() {
+  const { user } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -50,9 +53,12 @@ export default function Header() {
                   </NavLink>
                 </NavItem>
               ))}
-              <NavItem>
-                <Button href="/login">Entrar</Button>
-              </NavItem>
+              {user ? (
+                <div className="auth-content">
+                  <UserInfo />
+                </div>
+              ) : (<Button href="/login">Entrar</Button>
+              )}
             </Nav>
           </Collapse>
         </Navbar>

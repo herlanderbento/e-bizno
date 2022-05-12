@@ -5,13 +5,15 @@ import {
   FaPinterestP,
   FaTwitter,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Col, Row } from "reactstrap";
 import { Container } from "../../styles/container";
 import { Button } from "../Button";
 import { FooterContent } from "./styles";
 
+
 export default function Footer() {
+  const { push } = useHistory();
   return (
     <FooterContent>
       <Container>
@@ -142,7 +144,7 @@ export default function Footer() {
                   Aliquam faucibus, odio nec commodo aliquam, neque felis
                   placerat dui.
                 </p>
-                <Button>Criar conta</Button>
+                <Button onClick={() => push('/cadastrar')}>Criar conta</Button>
               </div>
             </div>
           </Col>

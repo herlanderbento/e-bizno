@@ -110,6 +110,10 @@ export const Navbar = styled(NavbarContent)`
       box-shadow: none;
     }
   }
+
+  .auth-content{
+    display: flex;
+  }
 `;
 
 export const NavLink = styled(Links)`

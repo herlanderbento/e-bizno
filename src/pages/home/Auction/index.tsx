@@ -14,7 +14,7 @@ export function Auction() {
       <Container>
         <Title
           className="mb-5 py-20"
-          name="Leilão eletrónico no e-Bizno"
+          name="Nossos imóveis eBizno"
           pointer="."
           desc="Mostrando todos os 36 resultados
           classificação padrão

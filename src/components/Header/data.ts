@@ -13,12 +13,12 @@ export const allData = [
     route: "/sobre-nos",
     active: "is-Active",
   },
-  {
-    id: uuid(),
-    menu: "Leilão",
-    route: "/leilao",
-    active: "is-Active",
-  },
+  // {
+  //   id: uuid(),
+  //   menu: "Leilão",
+  //   route: "/leilao",
+  //   active: "is-Active",
+  // },
   {
     id: uuid(),
     menu: "Imóveis",
