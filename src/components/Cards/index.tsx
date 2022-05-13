@@ -6,11 +6,11 @@ interface CardProps {
   to: string;
   sales?: string;
   feature?: string;
-  image: string;
-  price: string | number;
-  title: string;
-  category: string;
-  location: string;
+  image?: string;
+  price?: string | number;
+  title?: string;
+  category?: string;
+  location?: string;
   beds?: string;
   rooms?: string;
   area?: string;

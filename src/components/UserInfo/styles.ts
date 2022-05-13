@@ -51,8 +51,12 @@ export const Avatar = styled.div`
   border: 2px solid var(--primary);
 
   color: var(--text-dark);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 
   line-height: 1;
+
+  h2{
+    margin: 0;
+  }
 `

@@ -21,18 +21,21 @@ interface Request {
 }
 
 export function Section() {
-  const [allData, setAllData] = useState([]);
+
+  const [properties, setProperties] = useState([])
 
   useEffect(() => {
-    async function fetch() {
+
+    async function fetchProperties() {
       try {
-        const { data } = await api.get("/property");
-        setAllData(data);
+        const { data } = await api.get(`${process.env.REACT_APP_URL_PRODUCT}/9`);
+        setProperties(data);
       } catch (err) {
         console.error(err);
       }
     }
-    fetch();
+
+    fetchProperties();
   }, []);
 
   return (
@@ -45,33 +48,26 @@ export function Section() {
           </h2>
         </Title>
         <Row>
-          {allData?.map(
+        {properties?.map(
             ({
-              uuid,
-              image,
-              title,
-              categories,
-              location,
-              rooms,
-              beds,
+              IdProduct,
+              path,
+              name,
+              localization,
               area,
-              amount,
-            }: Request) => (
-              <Col key={uuid} lg="3" md="4" sm="6" className="my-3">
+              price,
+            }) => (
+              <Col key={IdProduct} lg="4" md="4" sm="6" className="my-3">
                 <Cards
-                  to={`propriedades/${uuid}`}
+                  to={`propriedades/id/${IdProduct}`}
                   sales="Novo"
                   feature="Disponível"
-                  image={img01}
-                  price={formatPrice(amount)}
-                  title={title}
-                  category={categories}
-                  location={location}
-                  beds={beds}
-                  rooms={rooms}
-                  area={area}
+                  image={path}
+                  price={formatPrice(price)}
+                  title={name}
+                  location={localization}
+                  category="Imóveis"                
                   classNamePrice="price"
-                  classNameNav="nav-list-nav"
                   classNameTitles="title"
                 />
               </Col>

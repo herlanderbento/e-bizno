@@ -59,12 +59,5 @@ export const Section = styled.section`
       padding: 12px 16px;
     }
   }
-
-  img.img-fluid{
-    width: 120px;
-    height: 120px;
-
-    object-fit: cover;
-  }
     
 `

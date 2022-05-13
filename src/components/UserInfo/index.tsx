@@ -2,7 +2,6 @@ import { useAuth } from "hooks/useAuth";
 import { BiWallet } from "react-icons/bi";
 import { FiLogOut } from "react-icons/fi";
 import { useHistory } from "react-router-dom";
-import { formatPrice } from "utils/format";
 import { UserContainer, Avatar } from "./styles";
 
 export function UserInfo() {
@@ -40,7 +39,9 @@ export function UserInfo() {
             <span>{money}</span>
           </small>
         </div>
-        <Avatar>{formatName()}</Avatar>
+        <Avatar>
+          <h2>{formatName()}</h2>
+        </Avatar>
       </div>
       <span className="logout" onClick={signOut}><FiLogOut /></span>
     </UserContainer>

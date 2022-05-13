@@ -12,7 +12,7 @@ export const Section = styled.section`
 
   .profile-header{
     padding-bottom: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border-bottom: 1px solid var(--light);
 
     h2{
@@ -60,11 +60,23 @@ export const Section = styled.section`
     }
   }
 
-  img.img-fluid{
-    width: 120px;
-    height: 120px;
-
-    object-fit: cover;
+  .table{
+    thead{
+      border: 0;
+    }
   }
     
+  .table-thead-bordered>:not(:last-child)>:last-child>* {
+    border-bottom: 0.0625rem solid rgba(33,50,91,.1);
+  }
+
+  .table-light{
+    background-color: #e7eaf3;
+  }
+
+  .img-property{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
 `

@@ -10,6 +10,7 @@ interface IUser {
   bi: string;
   email: string;
   state: boolean;
+  roles: boolean;
 }
 
 interface SignInCredentials {
@@ -32,7 +33,7 @@ interface IAuthContextData {
 }
 
 interface IAuthContextProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export const AuthContext = createContext({} as IAuthContextData);
@@ -60,7 +61,7 @@ export function AuthContextProvider({ children }: IAuthContextProviderProps) {
   });
 
   async function signIn(data: SignInCredentials) {
-    const response = await axios.post("http://192.168.188.80:2003/user/auth", data);
+    const response = await axios.post(`${process.env.REACT_APP_URL_AUTH}`, data);
 
     const { token, user, wellet: wallet } = response.data;
 

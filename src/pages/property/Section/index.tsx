@@ -1,3 +1,8 @@
+import { useEffect, useState } from 'react'
+import { useHistory, useParams } from "react-router-dom";
+
+import api from "axios"
+
 import { Button } from "components/Button";
 import { Input } from "components/Input";
 import { TextArea } from "components/TextArea";
@@ -8,7 +13,38 @@ import { Container } from "styles/container";
 import { formatPrice } from "utils/format";
 import { Content } from "./styles";
 
+interface UseParamsProps {
+  id: string;
+}
+
+interface IDataPropertyProps{
+  name: string;
+  IdProduct: string;
+  localization: string;
+  price: number;
+  area: string;
+  description: string;
+  path: string
+}
+
 export function Section() {
+  const { id } = useParams<UseParamsProps>();
+  const [dataProperty, setDataProperty] = useState<IDataPropertyProps>();
+
+  useEffect(() => {
+    async function fetch() {
+      try {
+        const { data } = await api.get(`${process.env.REACT_APP_URL_PRODUCT}/id/${id}`);
+        setDataProperty(data);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    fetch();
+  }, [id]);
+
+  const formatPrice = () => dataProperty?.price.toLocaleString('pt-AO', { style: 'currency', currency: 'AOA' });
+
   return (
     <Content>
       <Container>
@@ -28,19 +64,19 @@ export function Section() {
           <Col lg="8" sm="6" md="8">
             <div className="product">
               <div className="section-product-image">
-                <img src="/assets/images/property/property-grid-1.png" alt="" />
+                <img src={dataProperty?.path} alt="" />
               </div>
               <div className="section-product-description">
                 <div className="product-title">
                   <span>Apartamento</span>
-                  <h1>Condomínio Quinta dos Coqueiros T3</h1>
+                  <h1>{dataProperty?.name}</h1>
                 </div>
                 <div className="product-location">
                   <FaMapMarkerAlt color="#7e6ee5" size={16} />
-                  <span>Calombotão, Benguela</span>
+                  <span>{dataProperty?.localization}</span>
                 </div>
                 <div className="product-amount">
-                  <label>{formatPrice(1200000)}</label>
+                  <label>{formatPrice()}</label>
                 </div>
                 <div className="product-content">
                   <ul className="nav-list">
@@ -51,39 +87,16 @@ export function Section() {
                       <span>Banheiro: 7</span>
                     </li>
                     <li>
-                      <span>Área: 1400 Sqft</span>
+                      <span>Área: {dataProperty?.area}</span>
                     </li>
                   </ul>
                 </div>
                 <div className="product-description">
                   <h3>Descrição</h3>
                   <p>
-                    Maecenas egestas quam et volutpat bibendum metus vulputate
-                    platea eleifend sed Integer dictum ultricies consectetuer
-                    nunc vivamus a. Eu mus justo magna lacinia purus sodales
-                    scelerisque. Sociosqu pede facilisi. Curae; lacinia id.
-                    Sociis pretium gravida auctor mus amet accumsan adipiscing
-                    id dignissim, potenti. Curae; massa ridiculus lobortis
-                    consectetuer condimentum mollis vulputate hymenaeos tellus
-                    egestas auctor dictumst imperdiet curae; quisque ut porta
-                    molestie dui duis blandit molestie etiam enim erat sociis
-                    lacinia litora phasellus sit. Ipsum Lacinia class enim
-                    pharetra interdum potenti tellus parturient. Potenti
-                    scelerisque erat facilisi mauris tortor, mattis euismod
-                    augue nascetur rutrum augue ipsum tortor cum Porta primis.
+                    {dataProperty?.description}
                   </p>
-                  <p>
-                    Praesent lectus facilisi tempor ridiculus arcu pharetra non
-                    tellus. Torquent nisl tempor. Magnis mollis lobortis nam,
-                    montes ut, consequat sed amet nullam, malesuada nascetur
-                    ornare sociosqu magna cum gravida quam tincidunt dapibus
-                    tellus felis nibh inceptos netus convallis facilisis
-                    torquent. Laoreet pulvinar ut. Fringilla lacus tellus lectus
-                    erat hac conubia eget quisque nisi aliquam nibh molestie
-                    nisi hymenaeos id phasellus metus duis inceptos arcu
-                    hendrerit ligula blandit lectus nisl fermentum sociosqu
-                    pretium eros libero.
-                  </p>
+                
                 </div>
               </div>
             </div>
@@ -91,15 +104,15 @@ export function Section() {
           <Col lg="4" sm="6" md="4">
             <div className="merchant">
               <div className="merchant-header">
-                <div className="merchant-avatar">
+                {/* <div className="merchant-avatar">
                   <img
                     src="/assets/images/avatar/avatar-img-01.jpg"
                     alt="avatar"
                   />
-                </div>
+                </div> */}
                 <div className="merchant-info">
-                  <h4>Herlander Bento</h4>
-                  <span>Vendedor</span>
+                  <h4>ENVIA UMA MENSAGEM</h4>
+                  {/* <span>Vendedor</span> */}
                 </div>
               </div>
               <div className="merchant-form">
@@ -147,16 +160,18 @@ export function Section() {
                       <FaWhatsapp />
                       <span>WhatsApp</span>
                     </Button>
-                  </div>
-                  <div className="form-group mt-4">
-                    <Button>Enviar mensagem privada</Button>
 
-                    <p>
-                      Você pode responder a mensagens privadas na página "Caixa
-                      de entrada" da sua conta de usuário.
-                    </p>
+                   
                   </div>
+                  <p>
+                    Você pode responder a mensagens privadas na página "Caixa
+                    de entrada" da sua conta de usuário.
+                  </p>
+                  
                 </form>
+                <div className="form-group mt-5">
+                    <Button>Comprar</Button>
+                  </div>
               </div>
             </div>
             <div className="info">

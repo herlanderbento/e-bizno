@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Col, Row } from "reactstrap";
 import { Sections } from "./styles";
 import { allData } from "./data";
@@ -7,8 +8,28 @@ import { Container } from "styles/container";
 import { Title } from "components/Title";
 import { Cards } from "components/Cards";
 import { Button } from "components/Button";
+import api from 'axios';
 
 export function Auction() {
+  const [properties, setProperties] = useState([])
+
+  useEffect(() => {
+
+    async function fetchProperties() {
+      try {
+        const { data } = await api.get(`${process.env.REACT_APP_URL_PRODUCT}/8`);
+        setProperties(data);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    fetchProperties();
+  }, []);
+
+  console.log(properties)
+
+
   return (
     <Sections>
       <Container>
@@ -21,33 +42,25 @@ export function Auction() {
           "
         />
         <Row>
-          {allData?.map(
+          {properties?.map(
             ({
-              id,
-              img,
-              title,
-              categories,
-              location,
-              rooms,
-              beds,
+              IdProduct,
+              path,
+              name,
+              localization,
               area,
-              amount,
+              price,
             }) => (
-              <Col key={id} lg="3" md="4" sm="6" className="my-3">
+              <Col key={IdProduct} lg="3" md="4" sm="6" className="my-3">
                 <Cards
-                  to={`propriedades/${id}`}
+                  to={`propriedades/id/${IdProduct}`}
                   sales="Novo"
                   feature="Disponível"
-                  image={img}
-                  price={formatPrice(amount)}
-                  title={title}
-                  category={categories}
-                  location={location}
-                  beds={beds}
-                  rooms={rooms}
-                  area={area}
+                  image="/assets/images/property/property-grid-1.png"
+                  price={formatPrice(price)}
+                  title={name}
+                  location={localization}
                   classNamePrice="price"
-                  classNameNav="nav-list-nav"
                   classNameTitles="title"
                 />
               </Col>

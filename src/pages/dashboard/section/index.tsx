@@ -5,11 +5,12 @@ import { BsPersonBadge } from 'react-icons/bs'
 import { RiHome4Line, RiLockPasswordLine, RiProductHuntLine } from 'react-icons/ri'
 import { PersonInfo } from "../personInfo";
 import { ChangePassword } from "../changePassword";
-import { RegisterProducts } from "../registerProducts";
 import { BiWallet } from "react-icons/bi";
-import { Wallet } from "../wallet";
+import { Users } from "../users";
 import { Container } from "styles/container";
 import { Properties } from "../properties";
+import { Dash } from "../dash";
+
 import { useAuth } from "hooks/useAuth";
 
 
@@ -61,7 +62,7 @@ export function Section() {
                         onClick={() => setActiveTab("1")}
                       >
                         <BsPersonBadge />
-                        <span>Dados da conta</span>
+                        <span>Dashboard</span>
                       </NavLink>
                     </li>
                     <li className="nav-item">
@@ -69,29 +70,18 @@ export function Section() {
                         className={activeTab === "2" ? "active" : ""}
                         onClick={() => setActiveTab("2")}
                       >
-                        <RiLockPasswordLine />
-                        <span>Segurança</span>
-                      </NavLink>
+                        <BsPersonBadge />
+                        <span>Usuários</span>
+                      </NavLink>                  
+                  
                     </li>
-                    {user.roles !== true && (
-                      <>
                         <li className="nav-item">
                           <NavLink
                             className={activeTab === "3" ? "active" : ""}
                             onClick={() => setActiveTab("3")}
                           >
-                            <BiWallet />
-                            <span>Carteira</span>
-                          </NavLink>
-                        </li>
-
-                        <li className="nav-item">
-                          <NavLink
-                            className={activeTab === "5" ? "active" : ""}
-                            onClick={() => setActiveTab("5")}
-                          >
                             <RiHome4Line />
-                            <span>Meus Imóveis</span>
+                            <span>Imóveis</span>
                           </NavLink>
                         </li>
 
@@ -100,11 +90,20 @@ export function Section() {
                             className={activeTab === "4" ? "active" : ""}
                             onClick={() => setActiveTab("4")}
                           >
-                            <RiProductHuntLine />
-                            <span>Cadastrar Imóveis</span>
+                            <BsPersonBadge />
+                            <span>Dados da conta</span>
                           </NavLink>
                         </li>
-                      </>)}
+                    <li className="nav-item">
+                      <NavLink
+                        className={activeTab === "5" ? "active" : ""}
+                        onClick={() => setActiveTab("5")}
+                      >
+                        <RiLockPasswordLine />
+                        <span>Segurança</span>
+                      </NavLink>
+                    </li>
+                   
                   </nav>
                 </div>
               </div>
@@ -112,19 +111,21 @@ export function Section() {
             <div className="col-lg-8 col-sm-6 col-md-8">
               <TabContent activeTab={activeTab} className="pb-5">
                 <TabPane tabId="1">
-                  <PersonInfo />
+                  <Dash />
                 </TabPane>
                 <TabPane tabId="2">
-                  <ChangePassword />
+                  <Users/>
                 </TabPane>
                 <TabPane tabId="3">
-                  <Wallet />
+                  <Properties />
                 </TabPane>
                 <TabPane tabId="4">
-                  <RegisterProducts />
+                  <PersonInfo />
                 </TabPane>
                 <TabPane tabId="5">
-                  <Properties />
+                  <ChangePassword />
+                </TabPane>
+                <TabPane tabId="5">
                 </TabPane>
               </TabContent>
             </div>

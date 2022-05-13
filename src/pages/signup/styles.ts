@@ -154,4 +154,34 @@ export const Section = styled.section`
     }
   }
 
+  .separator{
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light);
+  }
+  .nav-item {
+    &:first-child{
+      margin-right: 20px;
+    }
+    .nav-link{
+      display: flex;
+      align-items: center;
+
+      color: var(--text-dark);
+      font-size: 16px;
+
+      padding: 8px 0 !important;
+      cursor: pointer;
+
+      position: relative;
+
+      svg{
+        margin-right: 6px;
+      }
+
+    }
+    .active{
+      color: var(--primary) !important;
+    }
+  }
+  
 `

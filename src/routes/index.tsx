@@ -8,6 +8,8 @@ import { Login } from "pages/login";
 import { SignUp } from "pages/signup";
 import { Forgot } from "pages/forgot";
 import { Profile } from "pages/profile";
+import { Dashboard } from "pages/dashboard";
+
 
 export default function routes() {
   return (
@@ -16,12 +18,13 @@ export default function routes() {
       <Route path="/sobre-nos" exact component={About} />
       {/* <Route path="/leilao" exact component={Auction} /> */}
       <Route path="/imoveis" exact component={Properties} />
-      <Route path="/propriedades/:id" exact component={Property} />
+      <Route path="/propriedades/id/:id" exact component={Property} />
       <Route path="/contactos" exact component={Contacts} />
       <Route path="/login" exact component={Login} />
       <Route path="/cadastrar" exact component={SignUp} />
       <Route path="/forgot" exact component={Forgot} />
       <Route path="/perfil" exact component={Profile} />
+      <Route path="/admin" exact component={Dashboard} />
     </Switch>
   );
 }

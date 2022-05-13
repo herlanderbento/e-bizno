@@ -11,7 +11,7 @@ export function Property() {
       <Header />
       <Hero title="Imóvel" page="Imóvel" />
       <Section />
-      <RecentProperties />
+      {/* <RecentProperties /> */}
       <Footer />
     </>
   );

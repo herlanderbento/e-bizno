@@ -14,7 +14,8 @@ export const Sections = styled.section`
   }
 
   .title {
-    font-size: 14px !important;
+    font-size: 16px !important;
+    text-transform: capitalize ;
   }
 
   .nav-list-nav li span {

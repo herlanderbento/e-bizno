@@ -3,21 +3,35 @@ import { Link, Router, useHistory } from "react-router-dom";
 import { toast } from 'react-toastify';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { Section } from "./styles";
-import { Input } from "components/Input";
-import { Button } from "components/Button";
 
 import api, { AxiosResponse } from 'axios'
+import { Nav, NavItem, TabContent, TabPane, NavLink } from "reactstrap";
+import { Client } from "./client";
+import { Merchant } from "./merchant";
+import { BsPersonBadge } from "react-icons/bs";
+import { RiLockPasswordLine } from "react-icons/ri";
 
+interface ISignUp {
+  FirstName: string,
+  LastName: string,
+  bi: string,
+  telephone: string,
+  email: string,
+  password: string,
+  roles: boolean
+}
 export function SignUp() {
   const router = useHistory();
+  const [activeTab, setActiveTab] = useState("1");
 
-  const [data, setData] = useState({
+  const [data, setData] = useState<ISignUp>({
     FirstName: '',
     LastName: '',
     bi: '',
     telephone: '',
     email: '',
-    password: ''
+    password: '',
+    roles: false
   })
 
   function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
@@ -31,7 +45,7 @@ export function SignUp() {
     e.preventDefault();
 
     try {
-      const response = await api.post("http://192.168.188.80:2002/client", data);
+      const response = await api.post("http://192.168.188.80:2005/merchant", data);
       toast.success('Usuário cadastrado com sucesso👌');
       router.push('/login')
     } catch (err) {
@@ -79,102 +93,35 @@ export function SignUp() {
                 <h1>Bem-vindo ao eBizno</h1>
                 <p>Faça signup para gerenciar sua conta.</p>
               </div>
-              <div className="body">
-                <form onSubmit={handleFormOnSubmit}>
-                  <div className="row">
-                    <div className="form-group mb-4 col-lg-6">
-                      <label className="form-label">Primeiro Nome <span className="required">*</span></label>
-                      <Input
-                        type="text"
-                        placeholder="Joe"
-                        name="FirstName"
-                        value={data.FirstName}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                    <div className="form-group mb-4 col-lg-6">
-                      <label className="form-label">Último Nome <span className="required">*</span></label>
-                      <Input
-                        type="text"
-                        placeholder="McQueen"
-                        name="LastName"
-                        value={data.LastName}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                  </div>
+              <div className="separator">
+                <nav className="nav">
+                  <li className="nav-item">
+                    <NavLink
+                      className={activeTab === "1" ? "active" : ""}
+                      onClick={() => setActiveTab("1")}
+                    >
+                      <span>Cliente</span>
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink
+                      className={activeTab === "2" ? "active" : ""}
+                      onClick={() => setActiveTab("2")}
+                    >
+                      <span>Vendedor</span>
+                    </NavLink>
+                  </li>
+                </nav>
 
-                  <div className="row">
-                    <div className="form-group mb-4 col-lg-6">
-                      <label className="form-label">Nº B.I <span className="required">*</span></label>
-                      <Input
-                        type="text"
-                        placeholder="000000000LA000"
-                        minLength={14}
-                        maxLength={14}
-                        name="bi"
-                        value={data.bi}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                    <div className="form-group mb-4 col-lg-6">
-                      <label className="form-label">Telefone<span className="required">*</span></label>
-                      <Input
-                        type="number"
-                        placeholder="(+244) 000 000 000"
-                        name="telephone"
-                        value={data.telephone}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className="form-group mb-4 col-lg-6">
-                      <label className="form-label">Email <span className="required">*</span></label>
-                      <Input
-                        type="email"
-                        placeholder="email@site.com"
-                        name="email"
-                        value={data.email}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                    <div className="form-group mb-4 col-lg-6">
-                      <label className="form-label">Password<span className="required">*</span></label>
-                      <Input
-                        type="password"
-                        isPassword
-                        placeholder="8+ caracteres necessários"
-                        minLength={8}
-                        value={data.password}
-                        onChange={handleInputChange}
-                        name="password"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="form-check mb-4">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                    <label className="form-check-label" htmlFor="flexCheckChecked">
-                      Ao enviar este formulário, li e reconheço a <Link to="/" className="label-form-link">Política de Privacidade</Link>
-                    </label>
-                  </div>
-                  <div className="row justify-content-center">
-                    <div className="form-group mb-4 col-lg-8">
-                      <Button>Cadastrar</Button>
-                    </div>
-                  </div>
-                  <div className="form-group text-center">
-                    <p>Já tem uma conta? <Link to="/login" className="form-label-link">Login</Link></p>
-                  </div>
-                </form>
               </div>
+              <TabContent activeTab={activeTab}>
+                <TabPane tabId="1">
+                  <Client />
+                </TabPane>
+                <TabPane tabId="2">
+                  <Merchant />
+                </TabPane>
+              </TabContent>
             </div>
           </div>
 
