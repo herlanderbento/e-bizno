@@ -1,5 +1,4 @@
 import axios from "axios";
-import FormData from 'form-data'
 import { toast } from 'react-toastify';
 import { Button } from "components/Button";
 import { Input } from "components/Input";
@@ -9,10 +8,10 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { Section } from "./styles";
 
 interface IProductProps {
-  name?: string;
+  name: string;
   IdMerchant: string;
   localization: string;
-  price: number;
+  price: string;
   area: string;
   description: string;
 }
@@ -20,68 +19,58 @@ interface IProductProps {
 export function RegisterProducts() {
   const { user } = useAuth();
 
-  const [formData, setFormData] = useState<IProductProps>({
+  const [data, setData] = useState<IProductProps>({
     IdMerchant: user.IdUser,
     name: "",
     localization: "",
-    price: 0,
+    price: '',
     area: "",
     description: "",
   });
 
-  const [images, setImages] = useState("")
+  const [image, setImage] = useState<File | any>();
+  const [isSelected, setIsSelected] = useState(false);
 
-  function handleInputChange(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>){
-    setFormData({
-      ...formData,
+
+  function handleInputChange(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+    setData({
+      ...data,
       [e.target.name]: e.target.value
     })
   }
-  // function handleImageChange(e: ChangeEvent<any>){
-  //   setPhoto(e.target.files[0])
-  // }
+  function handleInputFileChange(e: ChangeEvent<File | any>) {
+    setImage(e.target.files[0]);
+    setIsSelected(true)
+  }
 
-  const onImageChange = (event: ChangeEvent<any>) => {
-    if (event.target.files && event.target.files[0]) {
-      setImages(URL.createObjectURL(event.target.files[0]));
-    }
-  };
+  // const onImageChange = (event: ChangeEvent<any>) => {
+  //   if (event.target.files && event.target.files[0]) {
+  //     setImage(URL.createObjectURL(event.target.files[0]));
+  //   }
+  // };
 
   async function handleFormOnSubmit(e: FormEvent) {
     e.preventDefault();
 
-    const datas = {
-      IduMerchant: formData.IdMerchant,
-      name: formData.name,
-      localization: formData.localization,
-      price: formData.price,
-      area: formData.area,
-      description: formData.description,
-      file: images
+    const formData = new FormData();
+
+    formData.append('IdMerchant', data.IdMerchant);
+    formData.append('name', data.name);
+    formData.append('localization', data.localization);
+    formData.append('price', data.price);
+    formData.append('area', data.area);
+    formData.append('description', data.description);
+    formData.append('file', image);
+
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_URL_PRODUCT}`, formData)
+      console.log(response)
+      toast.success('Cliente cadastrado com sucesso👌');
+    } catch (err) {
+      console.error(err)
+      toast.error('Falha ao cadastrar cliente 🤯');
     }
 
-    // try {
-
-    
-    //   const response = await axios({
-    //     method: 'post',
-    //     url: `${process.env.REACT_APP_URL_PRODUCT}`,
-    //     data: datas,
-    //     headers: {
-    //       'Content-Type': 'multipart/form-data'
-    //      }
-    //   })
-    //   toast.success('Cliente cadastrado com sucesso👌');
-
-    //   console.log(response)
-
-    // } catch (err) {
-    //   toast.error('Falha ao cadastrar cliente 🤯');
-
-    //   console.error(err)
-    // }
-
-    // console.log('teste', formData)
   }
   return (
     <Section>
@@ -97,7 +86,7 @@ export function RegisterProducts() {
                 type="text"
                 placeholder="Digita o imóvel"
                 name="name"
-                value={formData.name}
+                value={data.name}
                 onChange={handleInputChange}
               />
             </div>
@@ -107,7 +96,7 @@ export function RegisterProducts() {
                 type="text"
                 placeholder="Digita a localização"
                 name="localization"
-                value={formData.localization}
+                value={data.localization}
                 onChange={handleInputChange}
               />
             </div>
@@ -117,7 +106,7 @@ export function RegisterProducts() {
           {/* <div className="row">
             <div className="form-group mb-4 col-lg-6">
               <label className="form-label">Província </label>
-              <select className="form-select" name="province" value={formData.province}
+              <select className="form-select" name="province" value={Data.province}
                 onChange={handleInputChange} aria-label="Default select example">
                 <option selected>Selecione a província</option>
                 <option value="1">One</option>
@@ -131,7 +120,7 @@ export function RegisterProducts() {
                 type="text"
                 placeholder="Digita o município"
                 name="municipe"
-                value={formData.municipe}
+                value={Data.municipe}
                 onChange={handleInputChange}
               />
             </div> 
@@ -145,7 +134,7 @@ export function RegisterProducts() {
                 type="text"
                 placeholder="Digita o preço"
                 name="price"
-                value={formData.price}
+                value={data.price}
                 onChange={handleInputChange}
               />
             </div>
@@ -155,7 +144,7 @@ export function RegisterProducts() {
                 type="text"
                 placeholder="Digita a dimensão do imóvel"
                 name="area"
-                value={formData.area}
+                value={data.area}
                 onChange={handleInputChange}
               />
             </div>
@@ -168,7 +157,7 @@ export function RegisterProducts() {
                 className="form-control"
                 placeholder="Descreve o imóvel"
                 name="description"
-                value={formData.description}
+                value={data.description}
                 onChange={handleInputChange}
               />
             </div>
@@ -177,18 +166,12 @@ export function RegisterProducts() {
               <Input
                 type="file"
                 name="file"
-                onChange={onImageChange}
-                accept="image/jpg,
-                image/png,
-                  image/jpeg,
-                  image/svg,
-                    image/gif"
+                onChange={handleInputFileChange}
               />
 
             </div>
 
           </div>
-
           <div className="form-group mb-4 col-lg-6">
             <Button>Actualizar</Button>
           </div>
