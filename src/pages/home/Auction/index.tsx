@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Col, Row } from "reactstrap";
 import { Sections } from "./styles";
-import { allData } from "./data";
 import { formatPrice } from "../../../utils/format";
 import { Link } from "react-router-dom";
 import { Container } from "styles/container";
@@ -56,7 +55,7 @@ export function Auction() {
                   to={`propriedades/id/${IdProduct}`}
                   sales="Novo"
                   feature="Disponível"
-                  image="/assets/images/property/property-grid-1.png"
+                  image={path}
                   price={formatPrice(price)}
                   title={name}
                   location={localization}

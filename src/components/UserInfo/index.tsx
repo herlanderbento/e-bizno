@@ -1,14 +1,17 @@
+import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import api from 'axios'
 import { useAuth } from "hooks/useAuth";
 import { BiWallet } from "react-icons/bi";
 import { FiLogOut } from "react-icons/fi";
-import { useHistory } from "react-router-dom";
 import { UserContainer, Avatar } from "./styles";
 
 export function UserInfo() {
   const { push } = useHistory()
   const { user } = useAuth()
+  const [wallet, setWallet] = useState<number>(0)
 
-  const wallet = JSON.parse(localStorage.getItem("eBizno.wallet") as string);
+  // const wallet = JSON.parse(localStorage.getItem("eBizno.wallet") as string);
 
   const money = wallet.toLocaleString('pt-AO', { style: 'currency', currency: 'AOA' });
 
@@ -28,6 +31,15 @@ export function UserInfo() {
 
     push('/login');
   }
+
+  useEffect(() => {
+    async function getWallet() {
+      const response = await api.get(`${process.env.REACT_APP_URL_WALLET}/${user.IdUser}`);
+      setWallet(response.data)
+    }
+
+    getWallet()
+  }, [])
 
   return (
     <UserContainer >

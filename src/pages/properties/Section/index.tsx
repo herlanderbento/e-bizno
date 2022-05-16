@@ -2,9 +2,8 @@ import { Col, Row } from "reactstrap";
 import { Container } from "styles/container";
 import { Sections, Title } from "./styles";
 import { formatPrice } from "utils/format";
-import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
+// import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
 import { useEffect, useState } from "react";
-import img01 from "../../../assets/images/property/property-grid-1.png";
 import { api } from "services/api";
 import { Cards } from "components/Cards";
 
@@ -48,7 +47,7 @@ export function Section() {
           </h2>
         </Title>
         <Row>
-        {properties?.map(
+          {properties?.map(
             ({
               IdProduct,
               path,
@@ -66,7 +65,7 @@ export function Section() {
                   price={formatPrice(price)}
                   title={name}
                   location={localization}
-                  category="Imóveis"                
+                  category="Imóveis"
                   classNamePrice="price"
                   classNameTitles="title"
                 />
@@ -74,7 +73,7 @@ export function Section() {
             )
           )}
         </Row>
-        <Pagination className="section-center">
+        {/* <Pagination className="section-center">
           <PaginationItem disabled>
             <PaginationLink href="#" previous />
           </PaginationItem>
@@ -96,7 +95,7 @@ export function Section() {
           <PaginationItem>
             <PaginationLink href="#" next />
           </PaginationItem>
-        </Pagination>
+        </Pagination> */}
       </Container>
     </Sections>
   );
