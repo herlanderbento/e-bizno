@@ -13,10 +13,10 @@ export function UserInfo() {
 
   // const wallet = JSON.parse(localStorage.getItem("eBizno.wallet") as string);
 
-  const money = wallet.toLocaleString('pt-AO', { style: 'currency', currency: 'AOA' });
+  const money = wallet?.toLocaleString('pt-AO', { style: 'currency', currency: 'AOA' });
 
   function formatName() {
-    const nameSplit = user.FirstName.split(" ");
+    const nameSplit = user?.FirstName.split(" ");
 
     if (nameSplit.length > 1) {
       return `${nameSplit[0].charAt(0)}${nameSplit[1].charAt(0)}`.toUpperCase();
@@ -45,7 +45,7 @@ export function UserInfo() {
     <UserContainer >
       <div className="d-flex align-items-center" onClick={() => push('/perfil')}>
         <div className="user-info">
-          <h4>{user.FirstName} {user.LastName}</h4>
+          <h4>{user?.FirstName} {user?.LastName}</h4>
           <small className="user-wallet">
             <BiWallet />
             <span>{money}</span>

@@ -1,5 +1,5 @@
 import { Col, Row } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Sections } from "./styles";
 import { allData } from "./data";
 import { Container } from "styles/container";
@@ -13,6 +13,9 @@ import api from 'axios';
 
 
 export function Section() {
+
+  const { push } = useHistory();
+
 
   const [properties, setProperties] = useState([])
 
@@ -101,9 +104,7 @@ export function Section() {
             )
           )}
           <Col lg="12" className="mt-5">
-            <Link to="/auction">
-              <Button>Ver mais productos</Button>
-            </Link>
+            <Button onClick={() => push('/imoveis')}>Ver mais productos</Button>
           </Col>
         </Row>
       </Container>

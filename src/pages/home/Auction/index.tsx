@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Col, Row } from "reactstrap";
 import { Sections } from "./styles";
 import { formatPrice } from "../../../utils/format";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Container } from "styles/container";
 import { Title } from "components/Title";
 import { Cards } from "components/Cards";
@@ -11,6 +11,9 @@ import api from 'axios';
 
 export function Auction() {
   const [properties, setProperties] = useState([])
+
+  const { push } = useHistory();
+
 
   useEffect(() => {
 
@@ -66,9 +69,7 @@ export function Auction() {
             )
           )}
           <Col lg="12" className="mt-5">
-            <Link to="/auction">
-              <Button>Ver mais productos</Button>
-            </Link>
+            <Button onClick={() => push('/imoveis')}>Ver mais productos</Button>
           </Col>
         </Row>
       </Container>

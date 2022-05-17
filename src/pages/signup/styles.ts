@@ -11,7 +11,7 @@ export const Section = styled.section`
     padding:  20px;
 
     width: 100%;
-    height: 100vh;
+    height: 110vh;
 
     display: flex;
     align-items: center;
@@ -88,8 +88,9 @@ export const Section = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
-    height: 100vh;
+    height: 110vh;
     position: relative;
   }
 

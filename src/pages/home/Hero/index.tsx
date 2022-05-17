@@ -3,8 +3,12 @@ import { Banner, InputCard } from "./styles";
 import { BiSearch } from "react-icons/bi";
 import { Container } from "styles/container";
 import { Button } from "components/Button";
+import { useHistory } from "react-router-dom";
 
 export function Hero() {
+
+  const { push } = useHistory();
+
   return (
     <Banner>
       <Container>
@@ -29,7 +33,7 @@ export function Hero() {
                       placeholder="Digita a localização"
                     />
                   </div>
-                  <Button>Pesquisar</Button>
+                  <Button onClick={() => push('/imoveis')}>Pesquisar</Button>
                 </InputCard>
               </form>
 
